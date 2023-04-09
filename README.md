@@ -21,6 +21,8 @@
 
 ## 4. 그 외
  - [cs 스터디 진행 (네트워크, 운영체제, DB)](https://github.com/konkuk-tech-course/cs-study)
+ - [`Clean Code - 로버트 O. 마틴`을 읽고 정리한 블로그](https://juno-juno.tistory.com/82)
+ - 리펙토링 학습
  - [Junit 학습](https://github.com/juno-junho/unit-testing-practice)
  - [Git 학습](https://juno-juno.tistory.com/45)
  - [Unix 명령어](https://juno-juno.tistory.com/category/Programming/Command%20Line)
