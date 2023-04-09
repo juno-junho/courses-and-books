@@ -1,7 +1,7 @@
 # :pushpin: 주요 수강 강의 및 교재
 > 각 링크는 스스로 학습한 결과를 증빙할수 있는 강의 수료증 및 깃헙 주소와 블로그 링크 입니다.
 ## 1. 스프링 학습
- - [Spring & Hibernate for Beginners (includes Spring Boot)](https://www.udemy.com/certificate/UC-867f6d90-d416-4b4a-b840-b64b0021fc64/)
+ - [유데미 - Spring & Hibernate for Beginners (includes Spring Boot)](https://www.udemy.com/certificate/UC-867f6d90-d416-4b4a-b840-b64b0021fc64/)
  - [자바 ORM 표준 JPA 프로그래밍 - 기본편](https://www.inflearn.com/certificate/465454-324109-4805422)
  - [실전! 스프링부트와 JPA 활용 1](https://www.inflearn.com/certificate/465454-324119-4805421)
  - [실전! 스프링부트와 JPA 활용 2](https://www.inflearn.com/certificate/465454-324214-4805420) 
