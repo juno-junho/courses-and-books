@@ -1,13 +1,13 @@
 package org.example.tdd;
 
 public class Dollar {
-    int amount;
+    private final int amount;
     public Dollar(int amount) {
         this.amount = amount;
     }
 
     public Dollar times(int multiplier) {
-        return new Dollar(amount *= multiplier);
+        return new Dollar(amount * multiplier);
     }
 
     @Override
