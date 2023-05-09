@@ -38,4 +38,13 @@ public class MoneyTest {
         assertThat(five.times(2)).isEqualTo(new Dollar(10));
         assertThat(five.times(3)).isEqualTo(new Dollar(15));
     }
+
+    // 5장
+
+    @Test
+    void testMultiplication5() {
+        Franc five = new Franc(5);
+        assertThat(five.times(2)).isEqualTo(new Franc(10));
+        assertThat(five.times(3)).isEqualTo(new Franc(15));
+    }
 }
