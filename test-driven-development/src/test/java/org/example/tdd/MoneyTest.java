@@ -35,7 +35,7 @@ public class MoneyTest {
     }
 
     // 4장
-    @Test
+   /* @Test
     void testMultiplication4() {
         Dollar five = new Dollar(5);
         assertThat(five.times(2)).isEqualTo(new Dollar(10));
@@ -49,7 +49,7 @@ public class MoneyTest {
         assertThat(five.times(2)).isEqualTo(new Franc(10));
         assertThat(five.times(3)).isEqualTo(new Franc(15));
     }
-
+*/
     // 8장
     @Test
     void testMultiplication8() {
@@ -63,5 +63,13 @@ public class MoneyTest {
         Money five = Money.franc(5);
         assertThat(five.times(2)).isEqualTo(Money.franc(10));
         assertThat(five.times(3)).isEqualTo(Money.franc(15));
+    }
+
+    // 9장
+
+    @Test
+    void testCurrency() {
+        assertThat(Money.dollar(1).currency()).isEqualTo("USD");
+        assertThat(Money.franc(1).currency()).isEqualTo("CHF");
     }
 }
