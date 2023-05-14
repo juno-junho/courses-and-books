@@ -1,5 +1,7 @@
 package org.example.tdd;
 
+import java.util.Objects;
+
 public class Money {
     protected int amount;
     protected String currency;
@@ -18,13 +20,15 @@ public class Money {
         return new Franc(amount, "CHF");
     }
 
+/*
     @Override
     public boolean equals(Object obj) {
         Money money = (Money) obj;
         return amount == money.amount && currency.equals(money.currency());
     }
+*/
 
-    Money times(int multiplier) {
+    Money times(int amount) {
         return null;
     }
 

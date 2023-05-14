@@ -54,6 +54,7 @@ public class MoneyTest {
     @Test
     void testMultiplication8() {
         Money five = Money.dollar(5);
+
         assertThat(five.times(2)).isEqualTo(Money.dollar(10));
         assertThat(five.times(3)).isEqualTo(Money.dollar(15));
     }
