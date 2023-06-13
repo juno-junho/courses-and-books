@@ -3,7 +3,10 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-
+.idea
+gradle
+gradlew.bat
+gradlew
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
@@ -40,4 +43,3 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-.idea
