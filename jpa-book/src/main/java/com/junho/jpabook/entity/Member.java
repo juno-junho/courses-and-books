@@ -9,17 +9,28 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table(name = "MEMBER")
+@Table(name = "MEMBER",
+        uniqueConstraints = {@UniqueConstraint(
+                name = "NAME_AGE_UNIQUE",
+                columnNames = {"NAME", "AGE"}
+        )})
+@SequenceGenerator(
+        name = "BOARD_SEQ_GENERATOR",
+        sequenceName = "BOARD_SEQ", // 시퀀스 이름
+        initialValue = 2, allocationSize = 1
+)
 public class Member {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "BOARD_SEQ")
     @Column(name = "ID")
     private String id;
 
     @Column(name = "NAME", nullable = false, length = 10)
     private String username;
 
-    private Integer age;
+    @Column(nullable = false)
+    private int age;
 
     @Column
     @Enumerated(EnumType.STRING)
