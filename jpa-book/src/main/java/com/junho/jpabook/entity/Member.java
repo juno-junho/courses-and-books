@@ -44,4 +44,17 @@ public class Member {
 
     @Lob
     private String description;
+
+    @ManyToOne
+    @JoinColumn(name = "TEAM_ID")
+    private Team team;
+
+    public void setTeam(final Team team) {
+        this.team = team;
+
+        // 무한 루프 체크
+        if (!team.getMembers().contains(this)) {
+            team.getMembers().add(this);
+        }
+    }
 }
