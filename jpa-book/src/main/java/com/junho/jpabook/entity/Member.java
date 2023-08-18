@@ -21,7 +21,7 @@ public class Member {
 
     private Integer age;
 
-    @Column(name = "role_type")
+    @Column
     @Enumerated(EnumType.STRING)
     private RoleType roleType;
 
