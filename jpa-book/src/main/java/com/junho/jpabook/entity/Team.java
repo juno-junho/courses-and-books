@@ -25,6 +25,7 @@ public class Team {
     // 연관관계 편의 메서드
     public void addMember(Member member) {
         this.members.add(member);
+
         // 무한 루프 체크
         if (member.getTeam() != this) {
             member.setTeam(this);
