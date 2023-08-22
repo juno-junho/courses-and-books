@@ -1,13 +1,13 @@
 package com.junho.jpabook.repository;
 
 import com.junho.jpabook.entity.Member;
+import jakarta.persistence.LockModeType;
+import jakarta.persistence.QueryHint;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Modifying;
-import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.*;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
@@ -31,11 +31,16 @@ public interface MemberRespository extends JpaRepository<Member, Long> {
     int bulkPriceUp(@Param("stockAmount") String stockAmount);
 
     // 페이징 - count 쿼리 사용
+    @QueryHints(
+            value = {
+                    @QueryHint( name = "org.hibername.readOnly", value = "true")
+            },
+            forCounting = true
+    )
+    @Lock(LockModeType.PESSIMISTIC_WRITE) // Lock 설정 가능
     Page<Member> findByUsername(String username, Pageable pageable);
     // 페이징 - cout 쿼리 사용 x (List, Slice)
 //    List<Member> findByUsername(String username, Pageable pageable);
 
     List<Member> findByUsername(String username, Sort sort);
-
-
 }
