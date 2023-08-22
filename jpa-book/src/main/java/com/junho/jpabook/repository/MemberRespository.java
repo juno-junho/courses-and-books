@@ -1,6 +1,10 @@
 package com.junho.jpabook.repository;
 
 import com.junho.jpabook.entity.Member;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -25,4 +29,13 @@ public interface MemberRespository extends JpaRepository<Member, Long> {
     @Modifying
     @Query("update Product p set p.price = p.price * 1.1 where p.stockAmount < :stockAmount")
     int bulkPriceUp(@Param("stockAmount") String stockAmount);
+
+    // 페이징 - count 쿼리 사용
+    Page<Member> findByUsername(String username, Pageable pageable);
+    // 페이징 - cout 쿼리 사용 x (List, Slice)
+//    List<Member> findByUsername(String username, Pageable pageable);
+
+    List<Member> findByUsername(String username, Sort sort);
+
+
 }
