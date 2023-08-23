@@ -12,7 +12,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface MemberRespository extends JpaRepository<Member, Long> {
+public interface MemberRespository extends JpaRepository<Member, Long>, JpaSpecificationExecutor<Member>, CustomMemberRepository{
 
     // NamedQuery with Param annotation
     List<Member> findByUsername(@Param("username") String username);
