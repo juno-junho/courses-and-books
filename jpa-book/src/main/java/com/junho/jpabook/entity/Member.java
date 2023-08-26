@@ -51,6 +51,9 @@ public class Member {
     @Lob
     private String description;
 
+    @Convert(converter = BooleanToYNConverter.class)
+    private boolean vip;
+
     @ManyToOne
     @JoinColumn(name = "TEAM_ID")
     private Team team;
