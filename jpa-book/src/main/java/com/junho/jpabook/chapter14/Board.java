@@ -16,6 +16,6 @@ public class Board {
     private String content;
 
     @OneToMany(mappedBy = "board")
-    @OrderColumn(name = "POSITION") // PersistentList 사용 -> 순서가 있는 컬렉션으로 인식한다.
+//    @OrderColumn(name = "POSITION") // PersistentList 사용 -> 순서가 있는 컬렉션으로 인식한다.
     private List<Comment> comments = new ArrayList<>();
 }
