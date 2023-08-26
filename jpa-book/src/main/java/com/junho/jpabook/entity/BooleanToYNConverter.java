@@ -3,7 +3,7 @@ package com.junho.jpabook.entity;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 
-@Converter
+@Converter(autoApply = true)
 public class BooleanToYNConverter implements AttributeConverter<Boolean, String> { // Boolean -> String 타입으로 변환
 
     @Override
