@@ -17,6 +17,7 @@ public class JpaMain {
         try {
             tx.begin();
             logic(em);
+            logic2(em, tx);
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
@@ -57,5 +58,14 @@ public class JpaMain {
 
         // 삭제
         em.remove(member);
+    }
+
+    private static void logic2(final EntityManager em, final EntityTransaction tx) {
+
+        // 준영속 상태의 초기화 (chapter 8)
+        Member member = em.getReference(Member.class, "id1");
+        tx.commit();
+        em.close();
+        member.getUsername(); // 준영속 상태 초기화 시도. // LazyInitializationException 발생
     }
 }

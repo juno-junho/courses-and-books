@@ -51,7 +51,8 @@ public class Member {
     @Lob
     private String description;
 
-    @Convert(converter = BooleanToYNConverter.class)
+//    @Convert(converter = BooleanToYNConverter.class)
+    // autoApply 적용 시 설정하지 않아도 된다.
     private boolean vip;
 
     @ManyToOne
